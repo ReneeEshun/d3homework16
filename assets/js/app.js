@@ -162,9 +162,16 @@ d3.csv("/hmw16Data.csv", function(err, data) {
     circles.append("text")
     // We return the abbreviation to .text, which makes the text the abbreviation.
     .text(function(d) {
+      // style("font", "10px sans-serif");
       return stateAbbrs[d.geography];
      
+     
     })
+    .style("font", "10px sans-serif")
+    .style("text-align", "middle")
+    .style("text-anchor", "bottom")
+    .attr("alignment-baseline", "center")
+
     .classed('state-label', true)
     .attr("dx", function(d) {
       // console.log(d);
